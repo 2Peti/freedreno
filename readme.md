@@ -27,7 +27,7 @@ tar xf mesa-24.2.6.tar.xz
 Apply patches:
 ```
 cd mesa-24.2.6
-PATCH_DIR=/root/termux-packages/packages/mesa; for PATCH in $(ls -1 $PATCH_DIR | grep .patch); do [[ $PATCH == "0008"* ]] && echo "SKIP PATCH !!!: $PATCH" || patch -p1 < $PATCH_DIR/$PATCH; done
+PATCH_DIR=/root/termux-packages/packages/mesa; for PATCH in $(ls -1 $PATCH_DIR | grep .patch); do echo "PATCH: $PATCH"; if [[ $PATCH == '0008*' ]]; then echo 'SKIP PATCH !!!: $PATCH'; continue; fi; patch -p1 < $PATCH_DIR/$PATCH; done
 ```
 Configure, build and install mesa:
 ```
