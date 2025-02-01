@@ -8,7 +8,7 @@ deb [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://deb.de
 deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://deb.debian.org/debian bookworm main contrib non-free\n\
 deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://deb.debian.org/debian bookworm-updates main contrib non-free\n\
 deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://security.debian.org/debian-security bookworm-security main contrib non-free\n\
-deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://deb.debian.org/debian bookworm-backports main contrib non-free" | sudo tee /etc/apt/sources.list > /dev/null
+deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://deb.debian.org/debian bookworm-backports main contrib non-free" | tee /etc/apt/sources.list > /dev/null
 ```
 
 Install dependencies:
