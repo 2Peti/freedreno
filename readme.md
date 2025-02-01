@@ -14,9 +14,8 @@ deb-src [signed-by=\"/usr/share/keyrings/debian-archive-keyring.gpg\"] http://de
 Install dependencies:
 ```
 apt update && apt upgrade 
-apt install wget git
-apt -t bookworm-backports build-dep mesa
-apt install llvm
+apt -y install wget git llvm
+apt -y -t bookworm-backports build-dep mesa
 ```
 Download patches and mesa:
 ```
